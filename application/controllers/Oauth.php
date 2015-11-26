@@ -44,7 +44,7 @@ class Oauth extends CI_Controller {
 
         $this->input->set_cookie("snsapi_userinfo", 1, 504800);
         $this->input->set_cookie("u_openid", $data['userinfo']['openid'], 504800);
-        
+
         $data['signPackage'] = $this->wx_oauth->GetSignPackage();
         $this->load->view('oauth/' . $views, $data);
     }
@@ -165,6 +165,25 @@ class Oauth extends CI_Controller {
             $result = $this->wx_oauth->http_request($tempURL, $template);
             print_r($result);
         }
+    }
+
+    /*
+     * 生成带参数的二维码
+     * 99999为优惠券参数 .
+     */
+
+    function ticket() {
+        $access_token = $this->wx_oauth->token_result();
+
+        $ticketURL = "https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=$access_token";
+        $postSTR = '{"action_name": "QR_LIMIT_SCENE", "action_info": {"scene": {"scene_id": 99999}}}';
+
+        $result = json_decode($this->wx_oauth->http_request($ticketURL, $postSTR),true);
+        $codeURL = 'https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=' . urlencode($result['ticket']);
+        $img = $this->wx_oauth->http_request($codeURL);
+        $filename = 'test.jpg';
+        $fp = @fopen($filename, "a"); //将文件绑定到流    
+        fwrite($fp, $img); //写入文件  
     }
 
     /**
