@@ -1,7 +1,7 @@
 '<xml><ToUserName><![CDATA[gh_a95adf96066f]]></ToUserName>
 <FromUserName><![CDATA[ooNnGwdf9KZ9llSY4vnn9lU808oA]]></FromUserName>
 <CreateTime>1448526830</CreateTime>
-<MsgType><![CDATA[event]]></MsgType>
+<MsgType><![CDATA[3333]]></MsgType>
 <Event><![CDATA[scancode_waitmsg]]></Event>
 <EventKey><![CDATA[rselfmenu_0_0]]></EventKey>
 <ScanCodeInfo><ScanType><![CDATA[qrcode]]></ScanType>
