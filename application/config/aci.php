@@ -33,86 +33,6 @@ $config['aci_module'] = array(
             ),
         ),
     ),
-    'wechat' =>
-    array(
-        'version' => '1',
-        'charset' => 'utf-8',
-        'lastUpdate' => '2015-10-09 20:10:10',
-        'moduleName' => 'wechat',
-        'modulePath' => '',
-        'moduleCaption' => '微信接口',
-        'description' => '由autoCodeigniter 系统的模块',
-        'fileList' => NULL,
-        'works' => true,
-        'moduleUrl' => '',
-        'system' => true,
-        'coder' => '啊亮学长',
-        'website' => 'http://',
-        'moduleDetails' =>
-        array(
-            0 =>
-            array(
-                'folder' => '',
-                'controller' => 'wechat',
-                'method' => '',
-                'caption' => '微信接口地址',
-            ),
-        ),
-    ),
-    'oauth' =>
-    array(
-        'version' => '1',
-        'charset' => 'utf-8',
-        'lastUpdate' => '2015-10-09 20:10:10',
-        'moduleName' => 'wechat',
-        'modulePath' => '',
-        'moduleCaption' => '微信接口',
-        'description' => '由autoCodeigniter 系统的模块',
-        'fileList' => NULL,
-        'works' => true,
-        'moduleUrl' => '',
-        'system' => true,
-        'coder' => '啊亮学长',
-        'website' => 'http://',
-        'moduleDetails' =>
-        array(
-            0 =>
-            array(
-                'folder' => '',
-                'controller' => 'oauth',
-                'method' => 'index',
-                'caption' => '微信网页 oauth 认证',
-            ),
-            1 =>
-            array(
-                'folder' => '',
-                'controller' => 'oauth',
-                'method' => 'callback',
-                'caption' => '微信网页 oauth 视图',
-            ),
-            2 =>
-            array(
-                'folder' => '',
-                'controller' => 'oauth',
-                'method' => 'addresults',
-                'caption' => '',
-            ),
-            3 =>
-            array(
-                'folder' => '',
-                'controller' => 'oauth',
-                'method' => 'viewrank',
-                'caption' => '微信网页 oauth 视图',
-            ),
-            4 =>
-            array(
-                'folder' => '',
-                'controller' => 'oauth',
-                'method' => 'send',
-                'caption' => '发送奖励方法',
-            ),
-        ),
-    ),
     'adminpanel' =>
     array(
         'version' => '1',
@@ -538,6 +458,175 @@ $config['aci_module'] = array(
                 'controller' => 'news',
                 'method' => 'edit',
                 'caption' => '内容系统 - 修改',
+            ),
+        ),
+    ),
+    'wechat' =>
+    array(
+        'version' => '1',
+        'charset' => 'utf-8',
+        'lastUpdate' => '2015-10-09 20:10:10',
+        'moduleName' => 'wechat',
+        'modulePath' => '',
+        'moduleCaption' => '微信前台握手控制器',
+        'description' => '微信握手控制器',
+        'fileList' => NULL,
+        'works' => true,
+        'moduleUrl' => '',
+        'system' => false,
+        'coder' => '啊亮学长',
+        'website' => 'http://',
+        'moduleDetails' =>
+        array(
+            0 =>
+            array(
+                'folder' => '',
+                'controller' => 'wechat',
+                'method' => '',
+                'caption' => '微信握手控制器',
+            ),
+        ),
+    ),
+    'oauth' =>
+    array(
+        'version' => '1',
+        'charset' => 'utf-8',
+        'lastUpdate' => '2015-10-09 20:10:10',
+        'moduleName' => 'wechat',
+        'modulePath' => '',
+        'moduleCaption' => '微信 Oauth 网页认证接口',
+        'description' => '微信 Oauth 网页认证接口',
+        'fileList' => NULL,
+        'works' => true,
+        'moduleUrl' => '',
+        'system' => false,
+        'coder' => '啊亮学长',
+        'website' => 'http://',
+        'moduleDetails' =>
+        array(
+            0 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'index',
+                'caption' => '微信网页 oauth 认证',
+            ),
+            1 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'callback',
+                'caption' => '微信网页 oauth 视图',
+            ),
+            2 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'addresults',
+                'caption' => '',
+            ),
+            3 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'viewrank',
+                'caption' => '微信网页 oauth 视图',
+            ),
+            4 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'send',
+                'caption' => '发送奖励方法',
+            ),
+            5 =>
+            array(
+                'folder' => '',
+                'controller' => 'oauth',
+                'method' => 'actiondd',
+                'caption' => '给用户分组发送消息',
+            ),
+        ),
+    ),
+    'WechatSite' =>
+    array(
+        'version' => '1',
+        'charset' => 'utf-8',
+        'lastUpdate' => '2015年12月01日',
+        'moduleName' => 'moduleMenu',
+        'modulePath' => 'adminpanel',
+        'moduleCaption' => '微信配置管理',
+        'description' => '微信官方接口开发',
+        'fileList' => NULL,
+        'works' => true,
+        'moduleUrl' => 'adminpanel/WechatSite',
+        'system' => false,
+        'coder' => '啊亮学长',
+        'website' => 'http://',
+        'moduleDetails' =>
+        array(
+            0 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'keywords',
+                'caption' => '微信-关键字列表',
+            ),
+            1 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'add',
+                'caption' => '微信-关键字列表',
+            ),
+            2 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'edit',
+                'caption' => '微信-关键字列表',
+            ),
+            3 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'delete',
+                'caption' => '微信-关键字列表',
+            ),
+            4 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'diymenu',
+                'caption' => '自定义菜单-列表',
+            ),
+            5 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'menu_add',
+                'caption' => '自定义菜单-添加',
+            ),
+            6 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'menu_edit',
+                'caption' => '自定义菜单-修改',
+            ),
+            7 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'menu_delete',
+                'caption' => '自定义菜单-修改',
+            ),
+            8 =>
+            array(
+                'folder' => 'adminpanel',
+                'controller' => 'WechatSite',
+                'method' => 'class_send',
+                'caption' => '自定义菜单-生成',
             ),
         ),
     ),

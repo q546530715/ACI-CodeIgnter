@@ -16,7 +16,7 @@ class Wx_oauth {
 
     function __construct() {
         $this->ci = & get_instance();
-        $this->ci->config->load('wx_oauth');                // 载入配置文件
+        $this->ci->config->load('wechat_config');                // 载入配置文件
     }
 
     /**

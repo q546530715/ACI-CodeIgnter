@@ -3,10 +3,10 @@
 $config['token'] = 'nanpengyouwsj';
  
 // appID
-$config['appid'] = 'wx307adf0af872d88b';
+$config['appid'] = 'wxbdc4ed16624422a4';
  
 // appSecret
-$config['secret'] = '12a459a147f568654697df22c806ba70';
+$config['secret'] = 'cc4abf35ac4a381c6f7848ac4c2bf449';
  
 // 回调链接地址
 $config['redirect_uri'] = 'http://mp.npy520.com/index.php/oauth/callback/';
