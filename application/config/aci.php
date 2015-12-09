@@ -482,7 +482,21 @@ $config['aci_module'] = array(
             array(
                 'folder' => '',
                 'controller' => 'wechat',
-                'method' => '',
+                'method' => 'message',
+                'caption' => '微信握手控制器',
+            ),
+            1 =>
+            array(
+                'folder' => '',
+                'controller' => 'wechat',
+                'method' => 'receivemsg',
+                'caption' => '微信握手控制器',
+            ),
+            2 =>
+            array(
+                'folder' => '',
+                'controller' => 'wechat',
+                'method' => 'sele',
                 'caption' => '微信握手控制器',
             ),
         ),

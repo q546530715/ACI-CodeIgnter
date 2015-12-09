@@ -37,7 +37,14 @@
                             endif;
                             ?>
                             <tr>
-                                <td><input type="checkbox" name="pid[]" value="<?php echo $v['id'] ?>"/></td>                           <td></td>
+                                <td> <?php if ($v['id'] == 1 || $v['id'] == 2): ?> </td>
+
+                                    <td><strong> <span style="color:red">不允许删除</span></strong></td>
+                                <?php else: ?>
+                                    <td><input type="checkbox" name="pid[]" value="<?php echo $v['id'] ?>"/></td>                         
+                                    <td></td>  
+                                <?php endif; ?>
+
                                 <td><?php echo $v['keyword'] ?></td>
                                 <td><?php echo $v['name'] ?></td>
                                 <td><?php echo $type; ?></td>

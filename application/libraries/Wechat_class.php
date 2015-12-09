@@ -12,7 +12,7 @@ class Wechat_class {
         //$this->ci->config->load('wechat_config');   // 载入配置文件
     }
 
-    function template_message_send($template_id, $openid, $content) {
+    function template_message_send($template_id, $openid, $content, $url = '') {
 
         switch ($template_id) {
             case 'GNh95-aHriTVy-PNAuJMlEKEzrk-5E2nUtlRev5ZyFc':
@@ -20,23 +20,23 @@ class Wechat_class {
                         {
                            "touser":"' . $openid . '",
                            "template_id":"GNh95-aHriTVy-PNAuJMlEKEzrk-5E2nUtlRev5ZyFc",
-                           "url":"",            
+                           "url":"' . $url . '",            
                            "data":{
                                    "first": {
-                                       "value":"$content[first]",
+                                       "value":"' . $content['first'] . '",
                                        "color":"#173177"
                                    },
                                    "keyword1":{
-                                       "value":"$content[keyword1]",
+                                       "value":"' . $content['keyword1'] . '",
                                        "color":"#FF0000"
                                    },
                                    "keyword2": {
-                                       "value":"$content[keyword2]",
+                                       "value":"' . $content['keyword2'] . '",
                                        "color":"#FF0000"
                                    },
                                    
                                    "remark":{
-                                       "value":"$content[remark]",
+                                       "value":"' . $content['remark'] . '",
                                        "color":"#173177"
                                    }
                            }
@@ -49,31 +49,31 @@ class Wechat_class {
                         {
                            "touser":"' . $openid . '",
                            "template_id":"GNh95-aHriTVy-PNAuJMlEKEzrk-5E2nUtlRev5ZyFc",
-                           "url":"",            
+                           "url":"' . $url . '",               
                            "data":{
                                    "first": {
                                        "value":"$content[first]",
                                        "color":"#173177"
                                    },
                                    "keyword1":{
-                                       "value":"$content[keyword1]",
+                                       "value":"' . $content['keyword1'] . '",
                                        "color":"#FF0000"
-                                   },
-                                   "keyword2": {
-                                       "value":"$content[keyword2]",
-                                       "color":"#FF0000"
-                                   },
+                                    },
+                                    "keyword2": {
+                                        "value":"' . $content['keyword2'] . '",
+                                        "color":"#FF0000"
+                                        },
                                     "keyword3": {
-                                       "value":"$content[keyword3]",
-                                       "color":"#FF0000"
-                                   },
-                                   "remark":{
-                                       "value":"$content[remark]",
-                                       "color":"#173177"
-                                   }
-                           }
-                       }
-                       ';
+                                        "value":"' . $content['keyword3'] . '",
+                                        "color":"#FF0000"
+                                        },
+                                        "remark": {
+                                            "value":"' . $content['remark'] . '",
+                                            "color":"#173177"
+                                        }
+                                    }
+                                }
+                                ';
                 break;
             default:
 

@@ -39,4 +39,17 @@ class Wechat_model extends Base_Model {
         }
     }
 
+    /*
+     * 检测openid是否存在,没有的话则存入数据库.
+     */
+
+    function check_is_receive_coupons($openid) {
+        $user = $this->get_one(array('u_openid' => $openid));
+        if ($user['is_receive_coupons'] == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

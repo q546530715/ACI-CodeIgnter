@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 // 用于验证微信接口配置信息的Token，可以任意填写
-$config['token'] = 'nanpengyouwsj';
+$config['token'] = 'weixin';
  
 // appID
 $config['appid'] = 'wxbdc4ed16624422a4';
