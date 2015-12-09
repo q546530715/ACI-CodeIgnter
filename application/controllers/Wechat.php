@@ -163,6 +163,9 @@ class Wechat extends Front_Controller {
                 }
 
                 break;
+            case 'unsubscribe':
+                $this->Wechat_model->delete(array('u_openid' => $this->msg->FromUserName));
+                break;
         }
 
         exit;
