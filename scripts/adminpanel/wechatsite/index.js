@@ -19,7 +19,7 @@ $("#reverseBtn").click(function(){
 			if(confirm("确定要删除菜单？"))
 			{	
 
-				$("#form_list").attr("action",SITE_URL+folder_name+"/wechatsite/delete/");
+				$("#form_list").attr("action",SITE_URL+folder_name+"/WechatSite/delete/");
 				
 				$("#form_list").submit();
 			}

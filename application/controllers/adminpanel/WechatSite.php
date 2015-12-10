@@ -46,11 +46,11 @@ class WechatSite extends Admin_Controller {
      */
     function delete() {
         if (isset($_POST)) {
-            $pidarr = isset($_POST['pid']) ? $_POST['pid'] : $this->showmessage('无效参数', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+            $pidarr = isset($_POST['pid']) ? $_POST['pid'] : $this->showmessage('无效参数', base_url(ADMIN_URL_PATH . 'WechatSite/diymenu'));
             $where = $this->WechatSite_model->to_sqls($pidarr, '', 'id');
             $status = $this->WechatSite_model->delete($where);
             if ($status) {
-                $this->showmessage('操作成功', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+                $this->showmessage('操作成功', base_url(ADMIN_URL_PATH . 'WechatSite/keywords'));
             } else {
                 $this->showmessage('操作失败');
             }
@@ -96,7 +96,7 @@ class WechatSite extends Admin_Controller {
 
             $inster = $this->WechatSite_model->insert($data);
             if ($inster) {
-                $this->showmessage('添加成功', base_url(ADMIN_URL_PATH . 'wechatsite/keywords'));
+                $this->showmessage('添加成功', base_url(ADMIN_URL_PATH . 'WechatSite/keywords'));
             } else {
                 $this->showmessage('添加失败');
             }
@@ -142,7 +142,7 @@ class WechatSite extends Admin_Controller {
 
             $status = $this->WechatSite_model->update($data, array('id' => $id));
             if ($status) {
-                $this->showmessage('修改成功', base_url(ADMIN_URL_PATH . 'wechatsite/keywords'));
+                $this->showmessage('修改成功', base_url(ADMIN_URL_PATH . 'WechatSite/keywords'));
             } else {
                 $this->showmessage('修改失败');
             }
@@ -187,7 +187,7 @@ class WechatSite extends Admin_Controller {
                 'sort' => (int) $this->input->post('sort'),
             );
             if ($this->Diymenu_model->insert($data) > 0) {
-                $this->showmessage('添加成功', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+                $this->showmessage('添加成功', base_url(ADMIN_URL_PATH . 'WechatSite/diymenu'));
             } else {
                 $this->showmessage('网络错误');
             }
@@ -223,7 +223,7 @@ class WechatSite extends Admin_Controller {
             );
 
             if ($this->Diymenu_model->update($data, array('id' => $id))) {
-                $this->showmessage('修改成功', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+                $this->showmessage('修改成功', base_url(ADMIN_URL_PATH . 'WechatSite/diymenu'));
             } else {
                 $this->showmessage('修改失败');
             }
@@ -244,7 +244,7 @@ class WechatSite extends Admin_Controller {
         if ($formhash == $this->formhash && $id > 0) {
 
             if ($this->Diymenu_model->delete(array('id' => $id))) {
-                $this->showmessage('操作成功', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+                $this->showmessage('操作成功', base_url(ADMIN_URL_PATH . 'WechatSite/diymenu'));
             } else {
                 $this->showmessage('操作失败');
             }
@@ -319,7 +319,7 @@ class WechatSite extends Admin_Controller {
         $rt = json_decode($this->wx_oauth->http_request($url, $data));
 
         if ($rt->errmsg == 'ok') {
-            $this->showmessage('生成菜单成功', base_url(ADMIN_URL_PATH . 'wechatsite/diymenu'));
+            $this->showmessage('生成菜单成功', base_url(ADMIN_URL_PATH . 'WechatSite/diymenu'));
         } else {
             $this->showmessage('网络错误,错误代码:' . $rt->errcode . $rt->errmsg);
         }

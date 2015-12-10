@@ -11,3 +11,7 @@ ERROR - 2015-12-09 10:44:49 --> 404 Page Not Found: Apple-touch-icon-precomposed
 ERROR - 2015-12-09 10:44:49 --> 404 Page Not Found: Apple-touch-iconpng/index
 ERROR - 2015-12-09 10:44:49 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
 ERROR - 2015-12-09 10:44:49 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2015-12-09 14:34:45 --> 404 Page Not Found: Apple-touch-icon-precomposedpng/index
+ERROR - 2015-12-09 14:34:45 --> 404 Page Not Found: Faviconico/index
+ERROR - 2015-12-09 14:34:45 --> 404 Page Not Found: Apple-touch-iconpng/index
+ERROR - 2015-12-09 14:36:07 --> 404 Page Not Found: Faviconico/index

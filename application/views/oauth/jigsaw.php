@@ -2,7 +2,7 @@
 if (empty($userinfo['openid'])):
     ?>
     <script language="javascript" type="text/javascript">
-        window.location.href = "http://mp.npy520.com/index.php/oauth/index/mp.npy520.comZindex.phpZoauthZcallback/jigsaw"
+        window.location.href = "http://mp.npy520.com/oauth/index/mp.npy520.comZoauthZcallback/jigsaw"
     </script> 
 <?php endif; ?>
 <!DOCTYPE html>
@@ -77,10 +77,10 @@ if (empty($userinfo['openid'])):
         <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
         <script>
 
-    var mebtnopenurl = 'http://mp.npy520.com/index.php/oauth/index/mp.npy520.comZindex.phpZoauthZcallback/jigsaw';
+    var mebtnopenurl = 'http://mp.npy520.com/oauth/index/mp.npy520.comZoauthZcallback/jigsaw';
     window.shareData = {
         "imgUrl": "<?php echo base_url('static/oauth/images/1.jpg'); ?>",
-        "timeLineLink": "http://mp.npy520.com/index.php/oauth/index/mp.npy520.comZindex.phpZoauthZcallback/jigsaw",
+        "timeLineLink": "http://mp.npy520.com/oauth/index/mp.npy520.comZoauthZcallback/jigsaw",
         "tTitle": "测试眼力和手速的拼图游戏.",
         "tContent": "好玩的拼图游戏，骚年还不赶紧来一发。"
     };

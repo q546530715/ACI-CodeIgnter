@@ -52,7 +52,7 @@ class Wechat_class {
                            "url":"' . $url . '",               
                            "data":{
                                    "first": {
-                                       "value":"$content[first]",
+                                       "value":"' . $content['first'] . '",
                                        "color":"#173177"
                                    },
                                    "keyword1":{

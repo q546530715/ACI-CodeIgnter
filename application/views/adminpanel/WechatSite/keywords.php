@@ -5,7 +5,7 @@
         <div class='panel-tools'>
 
             <div class='btn-group'>
-                <?php aci_ui_a($folder_name, 'wechatsite', 'add', '', ' class="btn  btn-sm "', '<span class="glyphicon glyphicon-plus"></span> 添加') ?>
+                <?php aci_ui_a($folder_name, 'WechatSite', 'add', '', ' class="btn  btn-sm "', '<span class="glyphicon glyphicon-plus"></span> 添加'); ?>
             </div>
             <div class='badge'><?php echo count($data_list) ?></div>
         </div>
@@ -37,9 +37,10 @@
                             endif;
                             ?>
                             <tr>
-                                <td> <?php if ($v['id'] == 1 || $v['id'] == 2): ?> </td>
+                                <?php if ($v['id'] == 1 || $v['id'] == 2): ?>
 
                                     <td><strong> <span style="color:red">不允许删除</span></strong></td>
+                                    <td><?php echo $folder_name;?></td>  
                                 <?php else: ?>
                                     <td><input type="checkbox" name="pid[]" value="<?php echo $v['id'] ?>"/></td>                         
                                     <td></td>  
@@ -50,7 +51,7 @@
                                 <td><?php echo $type; ?></td>
                                 <td><?php echo $v['count'] ?></td>
                                 <td>
-                                    <?php aci_ui_a($folder_name, 'wechatsite', 'edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
+                                    <?php aci_ui_a($folder_name, 'WechatSite', 'edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

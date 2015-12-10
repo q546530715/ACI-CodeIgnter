@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed.'); ?>
 <h3 class="page-header">
 
-    <?php aci_ui_a($folder_name, 'wechatsite', 'menu_add', '', ' class="btn btn-info btn-sm pull-right"', '<span class="glyphicon glyphicon-plus"></span> 添加新菜单') ?>
+    <?php aci_ui_a($folder_name, 'WechatSite', 'menu_add', '', ' class="btn btn-info btn-sm pull-right"', '<span class="glyphicon glyphicon-plus"></span> 添加新菜单') ?>
     自定义菜单生成 
 </h3>
 
@@ -41,9 +41,9 @@
                             <td><b><?php echo $v['title']; ?></b></td>
                             <td><?php echo $v['keyword']; ?></td>
                             <td><?php echo $v['is_show']; ?></td>
-                            <td><?php aci_ui_a($folder_name, 'wechatsite', 'menu_edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
+                            <td><?php aci_ui_a($folder_name, 'WechatSite', 'menu_edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
 
-                                <a href="<?php echo base_url("$folder_name/wechatsite/menu_delete/$v[id]/$formhash") ?>"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除 </a></td>
+                                <a href="<?php echo base_url("$folder_name/WechatSite/menu_delete/$v[id]/$formhash") ?>"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除 </a></td>
                         </tr>
                         <?php if (!empty($v['Submenu'])): foreach ($v['Submenu'] as $v): ?>
                                 <tr>
@@ -51,8 +51,8 @@
                                     <td  style="padding-left:30px;"> |---  <?php echo $v['title']; ?></td>
                                     <td><?php echo $v['keyword']; ?></td>
                                     <td><?php echo $v['is_show']; ?></td>
-                                    <td><?php aci_ui_a($folder_name, 'wechatsite', 'menu_edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
-                                        <a href="<?php echo base_url("$folder_name/wechatsite/menu_delete/$v[id]/$formhash") ?>"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除</a></td>
+                                    <td><?php aci_ui_a($folder_name, 'WechatSite', 'menu_edit', $v['id'], ' class="btn btn-default btn-xs"', '<span class="glyphicon glyphicon-edit"></span> 修改') ?>
+                                        <a href="<?php echo base_url("$folder_name/WechatSite/menu_delete/$v[id]/$formhash") ?>"  class="btn btn-default btn-xs"><span class="glyphicon glyphicon-remove"></span> 删除</a></td>
                                 </tr>
                                 <?php
                             endforeach;
@@ -67,7 +67,7 @@
     <div class="panel-footer">
         <div class=" text-center" >
             <div class="btn-group">
-                <?php aci_ui_a($folder_name, 'wechatsite', 'class_send', '', ' class="btn btn-warning btn-sm pull-right"', '<span class="glyphicon glyphicon-ok"></span> 生成新菜单') ?>
+                <?php aci_ui_a($folder_name, 'WechatSite', 'class_send', '', ' class="btn btn-warning btn-sm pull-right"', '<span class="glyphicon glyphicon-ok"></span> 生成新菜单') ?>
             </div>
         </div>
 

@@ -130,6 +130,10 @@ class Wechat extends Front_Controller {
 
         switch ($Event) {
             case 'subscribe':
+                //automatic_reply 系统后台设置的回复关键字
+                $automatic = $this->Keywords_model->get_one(array('keyword' => 'automatic_reply'));
+                $this->reply($this->checkType($automatic)); // 欢迎关注回复设置
+                
                 //扫描二维码关注事件
                 //EventKey 事件KEY值，qrscene_为前缀，后面为二维码的参数值
                 if (!empty($EventKey)) {
@@ -144,9 +148,7 @@ class Wechat extends Front_Controller {
                         }
                     }
                 }
-                //automatic_reply 系统后台设置的回复关键字
-                $automatic = $this->Keywords_model->get_one(array('keyword' => 'automatic_reply'));
-                $this->reply($this->checkType($automatic)); // 欢迎关注回复设置
+
 
                 break;
             case 'SCAN':
@@ -192,9 +194,11 @@ class Wechat extends Front_Controller {
             $tempURL = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=$access_token";
             $curl = $this->wx_oauth->http_request($tempURL, $template);
             $return = json_decode($curl);
-            $this->email($curl);
+            // $this->email($curl);
             if ($return->errmsg == 'ok') {
                 $this->Wechat_model->update(array('is_receive_coupons' => 1), array('u_openid' => $this->msg->FromUserName)); //更新为已领取优惠券  
+            } else {
+                $this->log('error-Event_template' . $return);
             }
         }
     }

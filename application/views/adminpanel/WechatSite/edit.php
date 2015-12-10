@@ -7,7 +7,7 @@
             <div class='panel-tools'>
 
                 <div class='btn-group'>
-                    <?php aci_ui_a($folder_name, 'wechatsite', 'keywords', '', ' class="btn  btn-sm "', '<span class="glyphicon glyphicon-arrow-left"></span> 返回') ?>
+                    <?php aci_ui_a($folder_name, 'WechatSite', 'keywords', '', ' class="btn  btn-sm "', '<span class="glyphicon glyphicon-arrow-left"></span> 返回') ?>
                 </div>
             </div>
         </div>

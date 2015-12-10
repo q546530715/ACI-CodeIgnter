@@ -38,6 +38,8 @@ class Oauth extends CI_Controller {
         }
         $code = $_GET['code'];
         $views = isset($_GET['state']) ? $_GET['state'] : '';
+
+
         //获取 token , openid
         $response = $this->wx_oauth->access_token($code);
         $data['userinfo'] = json_decode($response, true);
